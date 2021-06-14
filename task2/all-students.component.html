@@ -1,0 +1,30 @@
+<div class="card-body pt-0">
+    <table class="table table-bordered">
+
+    <tr>
+        <th>imageName</th>
+        <th>Student Name</th>
+        <th>RollNumber  </th>
+        <th>Grade  </th>
+        <th>Section</th>
+        <th>Birthday</th>
+        <th>Mobile</th>
+        <th>Email</th>
+    </tr>
+    
+    <tr *ngFor="let item of getAllStudents()">
+
+        <td> <img src="{{item.imageName}}" />   </td> 
+        <td> {{item.studentName | uppercase}} </td>
+        <td> {{item.StudentId}} </td>
+        <td> {{item.Grade}} </td>
+        <td> {{item.Section}} </td>
+        <td> {{item.Birthday | date : 'dd/MM/yyyy'}} </td>
+        <td> {{item.mobile | highlight}} </td>
+        <td> {{item.Email}} </td>
+        <td> <button (click)="addfee()">pay fee </button> </td>  
+     
+    
+    </tr>
+    </table>
+    </div>
